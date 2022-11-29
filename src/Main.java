@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        String input = "Треульник";
+        String input = "Круг";
         if (input == "Круг") {
             double r = 5;
             if (r > 0) {
@@ -10,7 +10,7 @@ public class Main {
                 System.out.println("Длинна окружности: " + Michal.getP());
                 System.out.println("Площадь круга: " + Michal.getS());
             } else {
-                System.out.println("Вы ввели некоректные данные");
+                throw new RuntimeException("There is no figure with such parameters.");
             }
         } else if (input == "Треугольник") {
             double a = 3, b = 4, c = 5;
@@ -19,7 +19,7 @@ public class Main {
                 System.out.println("Перимитр треугольника: " + Bill.getP());
                 System.out.println("Площадь треугольника: " + Bill.getS());
             } else {
-                System.out.println("Вы ввели некоректные данные");
+                throw new RuntimeException("There is no figure with such parameters.");
             }
         } else {
             double a = 3, b = 4;
@@ -28,7 +28,7 @@ public class Main {
                 System.out.println("Перимитр Прямоугольника: " + Rec.getP());
                 System.out.println("Площадь Прямоугольника: " + Rec.getS());
             } else {
-                System.out.println("Вы ввели некоректные данные");
+                throw new RuntimeException("There is no figure with such parameters.");
             }
         }
     }
