@@ -1,5 +1,35 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        Human humanDima = new Human();
+        String input = "Треульник";
+        if (input == "Круг") {
+            double r = 5;
+            if (r > 0) {
+                Circle Michal = new Circle(r);
+                System.out.println("Длинна окружности: " + Michal.getP());
+                System.out.println("Площадь круга: " + Michal.getS());
+            } else {
+                System.out.println("Вы ввели некоректные данные");
+            }
+        } else if (input == "Треугольник") {
+            double a = 3, b = 4, c = 5;
+            if (a > 0 && b > 0 && c > 0 && (a + b) > c && (b + c) > a && (a + c) > b) {
+                Tringle Bill = new Tringle(a, b, c);
+                System.out.println("Перимитр треугольника: " + Bill.getP());
+                System.out.println("Площадь треугольника: " + Bill.getS());
+            } else {
+                System.out.println("Вы ввели некоректные данные");
+            }
+        } else {
+            double a = 3, b = 4;
+            if (a > 0 && b > 0) {
+                Rectangle Rec = new Rectangle(a, b);
+                System.out.println("Перимитр Прямоугольника: " + Rec.getP());
+                System.out.println("Площадь Прямоугольника: " + Rec.getS());
+            } else {
+                System.out.println("Вы ввели некоректные данные");
+            }
+        }
     }
 }
